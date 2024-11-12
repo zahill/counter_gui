@@ -45,14 +45,9 @@ impl Counter {
             .padding(10)
             .on_press(Message::Decrement);
 
-        let content = container(
-            column![increment_btn, label, decrement_btn]
-                .spacing(10)
-                .padding(10),
-        )
-        .center_x(Fill)
-        .center_y(Fill)
-        .into();
+        let content = column![increment_btn, label, decrement_btn]
+            .spacing(10)
+            .padding(10);
 
         container(column![title, content])
             .padding(10)
